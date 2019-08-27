@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rabbit>
+    <connection>
+        <host>127.0.0.1</host>
+        <port>5672</port>
+        <username>kevin</username>
+        <password>123456</password>
+        <virtualHost>testhost</virtualHost>
+    </connection>
+
+
+    <sender>
+        <sender-queue>qw</sender-queue>
+        <sender-durable>true</sender-durable>
+        <sender-exclusive>true</sender-exclusive>
+        <sender-auto-dele>true</sender-auto-dele>
+        <sender-exchange>ex</sender-exchange>
+        <sender-exchange-type>direct</sender-exchange-type>
+    </sender>
+
+    <consumer-num>2</consumer-num>
+
+
+    <consumer consumer-num="2">
+        <!--消费者1-->
+        <consumer1>
+            <consumer1-exchange>ex</consumer1-exchange>
+            <consumer1-queue>aa</consumer1-queue>
+            <consumer1-qos>1</consumer1-qos>
+            <consumer1-durable>false</consumer1-durable>
+            <consumer1-exclusive>false</consumer1-exclusive>
+            <consumer1-auto-dele>false</consumer1-auto-dele>
+            <consumer1-auto-ack>false</consumer1-auto-ack>
+            <consumer1-routing-keys>delete,insert</consumer1-routing-keys>
+
+        </consumer1>
+
+        <!--消费者2-->
+        <consumer2>
+            <consumer2-exchange>ex</consumer2-exchange>
+            <consumer2-queue>bb</consumer2-queue>
+            <consumer2-qos>1</consumer2-qos>
+            <consumer2-durable>false</consumer2-durable>
+            <consumer2-exclusive>false</consumer2-exclusive>
+            <consumer2-auto-dele>false</consumer2-auto-dele>
+            <consumer2-auto-ack>false</consumer2-auto-ack>
+            <consumer2-routing-keys>insert,update</consumer2-routing-keys>
+        </consumer2>
+    </consumer>
+
+</rabbit>
