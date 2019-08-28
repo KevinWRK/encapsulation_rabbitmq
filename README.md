@@ -29,7 +29,9 @@ RabbitMq | 3.7.14 | http://www.rabbitmq.com/download.html
 
 
 ##开发工具
-工具 | 说明 | 官网 ----|----|---- IDEA | 开发IDE | https://www.jetbrains.com/idea/download 
+工具 | 版本号 | 下载
+ ----|----|---- 
+IDEA | 开发IDE | https://www.jetbrains.com/idea/download 
 
 ##参考文档
 ![baidu-logo](https://www.baidu.com/img/baidu_85beaf5496f291521eb75ba38eacbd87.svg)
