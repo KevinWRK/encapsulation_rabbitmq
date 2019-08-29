@@ -29,7 +29,9 @@ AMQP | 提供统一消息服务的应用层标准高级消息队列协议 | http
 
 
 ## 开发工具
-工具 | 说明 | 官网 ----|----|---- IDEA | 开发IDE | https://www.jetbrains.com/idea/download 
+工具 | 说明 | 官网 
+----|----|---- 
+IDEA | 开发IDE | https://www.jetbrains.com/idea/download 
 
 ## 参考文档
 ![baidu-logo](https://www.baidu.com/img/baidu_85beaf5496f291521eb75ba38eacbd87.svg)
