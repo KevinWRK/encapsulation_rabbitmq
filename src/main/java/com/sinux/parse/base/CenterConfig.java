@@ -1,5 +1,7 @@
 package com.sinux.parse.base;
 
+import com.sinux.mq.MQAttribute;
+
 import java.io.File;
 import java.lang.reflect.Method;
 import java.util.HashMap;
@@ -13,7 +15,7 @@ public class CenterConfig {
     Map<String, Map<String,Object>> map = new HashMap<String, Map<String, Object>>();
 
 
-    public Map<String,Map<String,Object>> parseFile(){
+    public void parseFile(){
         try {
             //获取当前项目resource文件的绝对路径
             String s = CenterConfig.class.getResource("/").toString();
@@ -58,6 +60,7 @@ public class CenterConfig {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return map;
+        //将整个三个文件的配置信息放到单例类中保存
+        MQAttribute.getInstance().configures = map;
     }
 }

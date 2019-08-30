@@ -3,7 +3,7 @@ package com.sinux.mq;
 import com.rabbitmq.client.Connection;
 
 import java.util.HashMap;
-import java.util.LinkedHashMap;
+import java.util.Map;
 
 /**
  * 单例存放消息队列的属性
@@ -12,14 +12,18 @@ import java.util.LinkedHashMap;
  * @date 2019-08-16 13:41
  */
 public class MQAttribute {
-    //用一个Map集合来存放读取到xml的属性信息
-    public LinkedHashMap<String,String> attributes = new LinkedHashMap<String, String>();
+    //使用Map嵌套来保存xml,json,properties三个配置文件的配置信息
+    public Map<String, Map<String,Object>> configures;
+    //用一个Map集合来存放要使用的配置文件中的配置信息
+    public HashMap<String,Object> attributes;
     //使用map来存放发送者和消费者
     public HashMap<String,Object> senderAndConsumer = new HashMap<String, Object>();
     //存放rabbitmq的连接对象
     public Connection connection = null;
     //使用一个map集合来存放连接数据
-    public HashMap<String,String> conParam = new HashMap<String, String>();
+//    public HashMap<String,String> conParam = new HashMap<String, String>();
+
+
 
     private static MQAttribute mqAttribute = null;
 

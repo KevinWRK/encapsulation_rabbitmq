@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rabbit>
+
+    <!--连接参数-->
     <connection>
         <host>127.0.0.1</host>
         <port>5672</port>
@@ -11,15 +13,12 @@
 
     <sender>
         <sender-queue>qw</sender-queue>
-        <sender-durable>true</sender-durable>
-        <sender-exclusive>true</sender-exclusive>
-        <sender-auto-dele>true</sender-auto-dele>
+        <sender-durable>false</sender-durable>
+        <sender-exclusive>false</sender-exclusive>
+        <sender-auto-dele>false</sender-auto-dele>
         <sender-exchange>ex</sender-exchange>
         <sender-exchange-type>direct</sender-exchange-type>
     </sender>
-
-    <consumer-num>2</consumer-num>
-
 
     <consumer consumer-num="2">
         <!--消费者1-->
@@ -47,5 +46,35 @@
             <consumer2-routing-keys>insert,update</consumer2-routing-keys>
         </consumer2>
     </consumer>
+
+
+
+
+    <!--<sender>-->
+        <!--<sender-queue>qw</sender-queue>-->
+        <!--<sender-durable>false</sender-durable>-->
+        <!--<sender-exclusive>false</sender-exclusive>-->
+        <!--<sender-auto-dele>false</sender-auto-dele>-->
+        <!--&lt;!&ndash;<sender-exchange>ex</sender-exchange>&ndash;&gt;-->
+        <!--&lt;!&ndash;<sender-exchange-type>direct</sender-exchange-type>&ndash;&gt;-->
+    <!--</sender>-->
+
+    <!--<consumer-num>2</consumer-num>-->
+
+
+    <!--<consumer consumer-num="2">-->
+        <!--&lt;!&ndash;消费者1&ndash;&gt;-->
+        <!--<consumer1>-->
+            <!--&lt;!&ndash;<consumer1-exchange>ex</consumer1-exchange>&ndash;&gt;-->
+            <!--<consumer1-queue>qw</consumer1-queue>-->
+            <!--<consumer1-qos>1</consumer1-qos>-->
+            <!--<consumer1-durable>false</consumer1-durable>-->
+            <!--<consumer1-exclusive>false</consumer1-exclusive>-->
+            <!--<consumer1-auto-dele>false</consumer1-auto-dele>-->
+            <!--<consumer1-auto-ack>false</consumer1-auto-ack>-->
+            <!--&lt;!&ndash;<consumer1-routing-keys>delete,insert</consumer1-routing-keys>&ndash;&gt;-->
+        <!--</consumer1>-->
+
+    <!--</consumer>-->
 
 </rabbit>

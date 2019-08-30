@@ -14,22 +14,16 @@ import java.util.concurrent.ConcurrentLinkedQueue;
  */
 public class Test4 {
     public static void main(String[] args) throws InterruptedException {
-        new Init().mqInit();
 
+        new Init().mqInit();
         CurrencySender sender = CreateObjectTool.getSender("sender");
         CurrencyConsumer consumer1 = CreateObjectTool.getConsumer("consumer1");
 
 
-        String[] keys = {"delete","update"};
-        sender.sendMessage("直接new出来的对象发送的消息",keys);
-
-        Thread.sleep(500);
-
-
-
+        String[] keys = {"insert"};
+        sender.sendMessage("消息生产者发送的第一条消息",keys);
+        Thread.sleep(2000);
         ConcurrentLinkedQueue<String> messages = consumer1.messages;
         System.out.println("consumer获取到的消息"+messages.poll());
-
-
     }
 }
