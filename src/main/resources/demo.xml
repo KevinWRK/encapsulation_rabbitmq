@@ -20,7 +20,7 @@
         <sender-exchange-type>direct</sender-exchange-type>
     </sender>
 
-    <consumer consumer-num="2">
+    <consumer>
         <!--消费者1-->
         <consumer1>
             <consumer1-exchange>ex</consumer1-exchange>

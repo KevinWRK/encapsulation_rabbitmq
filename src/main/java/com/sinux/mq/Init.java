@@ -14,27 +14,30 @@ import java.util.HashMap;
  */
 public class Init {
     HashMap<String,Object> attribute;
-    public void mqInit(){
+
+    /**
+     * 初始化配置
+     * @param configureName
+     */
+    public void mqInit(String configureName){
         //解析配置文件
         new CenterConfig().parseFile();
         //选择要使用哪一个配置文件的配置
-        MQAttribute.getInstance().attributes = (HashMap<String, Object>) MQAttribute.getInstance().configures.get("demo.xml");
+        MQAttribute.getInstance().attributes = (HashMap<String, Object>) MQAttribute.getInstance().configures.get(configureName);
         attribute = MQAttribute.getInstance().attributes;
 
+        //初始化连接到连接池队列中
+        initConnection();
 
 
         //加载配置文件
         //parseXML(Init.class,"demo.xml");
 
-
-
-        //初始化连接到连接池队列中
-        initConnection();
         //把必要的参数佩奇
         //autoConfig();
 
 
-        HashMap<String,Object> senderAndConsumer = MQAttribute.getInstance().senderAndConsumer;
+//        HashMap<String,Object> senderAndConsumer = MQAttribute.getInstance().senderAndConsumer;
         //获取消费者人数
 //        Integer conNum = Integer.valueOf((String) attribute.get("consumer-num"));
 

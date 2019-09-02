@@ -17,7 +17,7 @@ public class MQAttribute {
     //用一个Map集合来存放要使用的配置文件中的配置信息
     public HashMap<String,Object> attributes;
     //使用map来存放发送者和消费者
-    public HashMap<String,Object> senderAndConsumer = new HashMap<String, Object>();
+//    public HashMap<String,Object> senderAndConsumer = new HashMap<String, Object>();
     //存放rabbitmq的连接对象
     public Connection connection = null;
     //使用一个map集合来存放连接数据

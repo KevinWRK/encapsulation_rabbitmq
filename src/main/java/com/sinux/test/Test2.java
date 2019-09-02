@@ -1,14 +1,12 @@
 package com.sinux.test;
 
-import com.sinux.mq.Init;
-
 /**
  * @author kevin
  * @date 2019-08-19 14:52
  */
 public class Test2 {
     public static void main(String[] args) throws InterruptedException {
-        new Init().mqInit();
+//        new Init().mqInit();
 
 
 

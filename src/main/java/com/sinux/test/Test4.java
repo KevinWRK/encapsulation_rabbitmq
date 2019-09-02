@@ -15,7 +15,7 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 public class Test4 {
     public static void main(String[] args) throws InterruptedException {
 
-        new Init().mqInit();
+        new Init().mqInit("demo.xml");
         CurrencySender sender = CreateObjectTool.getSender("sender");
         CurrencyConsumer consumer1 = CreateObjectTool.getConsumer("consumer1");
 
