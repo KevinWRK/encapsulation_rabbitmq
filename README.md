@@ -1,10 +1,10 @@
-# RabbitMQ 封装框架
+# RabbitMQ 封装
 
 ## 前言
 为了不在每一次开发中累赘重复的去写消息队列这一块，故对RabbitMQ的生产者和消费者对象的生成做了一个简易的封装
 
 ## 项目文档
-[RabbitMQ 封装框架](http://192.168.10.61:54321/root/rabbitmq-framework.git)
+[RabbitMQ 封装](http://192.168.10.61:54321/root/rabbitmq-framework.git)
 
 ## RabbitMQ在项目中的运用
 
@@ -126,6 +126,3 @@ AMQP | 提供统一消息服务的应用层标准高级消息队列协议 | http
 | 工具 | 说明 | 官网 |
 | ----|----|---- |
 |IDEA | 开发IDE | https://www.jetbrains.com/idea/download |
-
-## 参考文档
-![baidu-logo](https://www.baidu.com/img/baidu_85beaf5496f291521eb75ba38eacbd87.svg)
